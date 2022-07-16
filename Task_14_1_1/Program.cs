@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Task_14_1_1.Models;
 
-namespace LinqModule.Unit_1.WhereExample
+namespace Task_14_1_1
 {
     class Program
     {
