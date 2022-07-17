@@ -22,6 +22,7 @@ namespace PhoneBook
 
             while (true)
             {
+                Console.Write("Введите номер страницы ");
                 char input = Console.ReadKey().KeyChar;
                 Console.Clear();
                 if (!char.IsDigit(input))
@@ -31,7 +32,9 @@ namespace PhoneBook
                 };
                 int page = Convert.ToInt32(input.ToString());
                 int itemsOnPage = 2;
-                IEnumerable<Contact> pageContacts = phoneBook.Skip((page - 1) * itemsOnPage).Take(itemsOnPage);
+                IEnumerable<Contact> pageContacts = phoneBook.
+                    Skip((page - 1) * itemsOnPage).
+                    Take(itemsOnPage);
                 if(pageContacts.Count() == 0)
                 {
                     Console.WriteLine("Ошибка. Страница не существует.");
